@@ -20,34 +20,58 @@ Each program has a few options:
 The structure of the .txt file can be written in up to four ways, depending on the algorithm (Simple Matrix, Matrix, Triangle, Real Coords, Coords):
 
 1. Simple Matrix (without the "Vertex #number" at the leftmost parts of the file):
+
 [Number of vertices]
+
 Vertex #0: [Cost to travel to vertex #0], [Cost to travel to vertex #1], [...]
+
 Vertex #1: [...]
+
 [...]
+
 
 2. Matrix (without the "Vertex #number" at the leftmost parts of the file):
+
 MATRIX
+
 [Number of vertices]
+
 Vertex #0: [Cost to travel to vertex #0], [Cost to travel to vertex #1], [...]
+
 Vertex #1: [...]
+
 [...]
+
 EOF
 
-3. Triangle - same as the matrix, just without the lower part (below the diagonal). The difference is that the triangle is used for undirected graphs and the matrix for directed graphs
 
-4. Coords:
+4. Triangle - same as the matrix, just without the lower part (below the diagonal). The difference is that the triangle is used for undirected graphs and the matrix for directed graphs
+
+5. Coords:
+
 COORDS
+
 [Number of vertices]
+
 [Vertex number] [Coordinate X] [Coordinate Y]
+
 [...]
+
 EOF
 
-5. Real Coords:
+
+7. Real Coords:
+
 REAL_COORDS
+
 [Number of vertices]
+
 [Vertex number] [Latitude] [Longitude]
+
 [...]
+
 EOF
+
 
 Algorithms and their supported data types:
 - Brute Force:
@@ -64,6 +88,9 @@ Algorithms and their supported data types:
 
 
 The .ini file is used for benchmarking. It's structure is as follows:
+
 [Name of the .txt file] [Number of Repetitions] [Minimum cost of the optimal path] [Optimal path]
+
 [...]
+
 [Name of the .csv file to save it to]
